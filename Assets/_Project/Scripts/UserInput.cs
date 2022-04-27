@@ -1,28 +1,22 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 namespace _Project
 {
     public class UserInput : MonoBehaviour
     {
+        private InputSystemTest _inputSystemTest;
+
+        private void Awake()
+        {
+            _inputSystemTest = new InputSystemTest();
+            _inputSystemTest.Enable();
+            _inputSystemTest.Player.Fire.performed += context => Debug.Log("fire");
+        }
+
         private void Update()
         {
-            if(Keyboard.current.sKey.wasPressedThisFrame)
-            {
-                Debug.Log("S key was pressed");
-            }
-            
-            if(Keyboard.current.sKey.wasReleasedThisFrame)
-            {
-                Debug.Log("S key was released");
-            }
-            
-            if(Mouse.current.leftButton.isPressed)  // isPressed is a property of the Mouse.current.leftButton
-            {
-                Debug.Log("Left mouse button is pressed");
-            }
-            
+            var direction = _inputSystemTest.Player.Move.ReadValue<Vector2>();
+            transform.Translate(direction * Time.deltaTime);
         }
     }
 }
