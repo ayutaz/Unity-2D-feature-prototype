@@ -5,6 +5,7 @@ namespace _Project
     public class UserInput : MonoBehaviour
     {
         private InputSystemTest _inputSystemTest;
+        [SerializeField] private Transform userObject;
 
         private void Awake()
         {
@@ -16,7 +17,7 @@ namespace _Project
         private void Update()
         {
             var direction = _inputSystemTest.Player.Move.ReadValue<Vector2>();
-            transform.Translate(direction * Time.deltaTime);
+            userObject.Translate(direction * Time.deltaTime);
         }
     }
 }
