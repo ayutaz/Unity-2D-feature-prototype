@@ -12,7 +12,15 @@ namespace _Project
             CharacterInfoList = new List<CharacterInfo>();
         }
 
-        public static void CharacterDataDebugLog(CharacterInfo characterInfo)
+        public void DebugLogInCharacterList()
+        {
+            foreach (var characterInfo in CharacterInfoList)
+            {
+                CharacterDataClassDebugLog(characterInfo);
+            }
+        }
+
+        public static void CharacterDataClassDebugLog(CharacterInfo characterInfo)
         {
             Debug.Log("name : " + characterInfo.name + ", atk : " + characterInfo.atk + ", def : " + characterInfo.def + ", hp : " + characterInfo.hp + ", mp : " + characterInfo.mp);
         }

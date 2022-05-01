@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
+using VContainer;
 
 namespace _Project.Main
 {
-    public class UserInput : MonoBehaviour
+    public class MoveHandler : MonoBehaviour
     {
         private InputSystemTest _inputSystemTest;
         [SerializeField] private Transform userObject;
 
-        private void Awake()
+        [Inject]
+        private void Construct(InputSystemTest inputSystemTest)
         {
-            _inputSystemTest = new InputSystemTest();
+            _inputSystemTest = inputSystemTest;
             _inputSystemTest.Enable();
+        }
+
+        private void Start()
+        {
             _inputSystemTest.Player.Fire.performed += context => Debug.Log("fire");
         }
 

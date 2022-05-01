@@ -262,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1165761662}
   - component: {fileID: 1165761664}
-  - component: {fileID: 1165761663}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -285,22 +284,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1165761663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165761661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcedca3da2fbbc746a7f357201af8ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
-  autoRun: 1
-  autoInjectGameObjects: []
 --- !u!114 &1165761664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,9 +297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: _Project.RootLifetimeScope
+    TypeName: _Project.Root.RootLifetimeScope
   autoRun: 1
-  autoInjectGameObjects: []
+  autoInjectGameObjects:
+  - {fileID: 1081983890}
 --- !u!1 &1169582934
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf4d8df1d704d5689f3c69bd70d1cb9, type: 3}
   m_Name: VContainerSettings
   m_EditorClassIdentifier: 
-  RootLifetimeScope: {fileID: 6739208379527115381, guid: 29e194135c12ef24d9271d81da343387, type: 3}
+  RootLifetimeScope: {fileID: 3574387659133373143, guid: acaf511dacbb7b545851fb6a36419321, type: 3}
   EnableDiagnostics: 1

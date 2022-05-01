@@ -21,6 +21,7 @@ namespace _Project.Loading
         {
             var data = await GetGameData.GetGameInfo<CharacterInfoList>(URL);
             _characterDataModel.CharacterInfoList = data.gameInfo;
+            Debug.Log("list count : " + _characterDataModel.CharacterInfoList.Count);
 
             //見た目上ロードをしている感じに見せたいため、特に処理の意味はない
             for (var time = 1; time <= 10; time++)
@@ -29,7 +30,8 @@ namespace _Project.Loading
                 _loadingView.SetProgress(time / 10f);
             }
 
-            SceneManager.LoadSceneAsync("_Project/Scenes/Main");
+            SceneManager.LoadSceneAsync("_Project/Scenes/Main", LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("_Project/Scenes/Loading");
         }
     }
 }
