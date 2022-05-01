@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Project
+namespace _Project.Main
 {
     public class UserInput : MonoBehaviour
     {
