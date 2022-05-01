@@ -9,15 +9,6 @@ on: [ workflow_dispatch ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  remove-old-artifacts:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-    - name: Remove old artifacts
-      uses: c-hive/gha-remove-artifacts@v1
-      with:
-        age: '1 days'
- 
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -29,7 +20,6 @@ jobs:
           - 2021.3.0f1
         targetPlatform:
          - WebGL
-    needs: remove-old-artifacts
     steps:
     - name: Checkout
       uses: actions/checkout@v2
