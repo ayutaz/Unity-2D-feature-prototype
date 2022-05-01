@@ -34,6 +34,7 @@ MonoBehaviour:
     - com.yasirkula.assetusagedetector
     - com.dbrizov.naughtyattributes
     - jp.ayutaz.simplefoldericon
+    - jp.hadashikick.vcontainer
     m_IsDefault: 0
     m_Capabilities: 0
   m_UserSelectedRegistryName: OpenUPM
