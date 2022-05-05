@@ -6,11 +6,9 @@ namespace _Project.Loading
 {
     public class GetGameData
     {
-        private const string SheetName = "gameInfo";
-
-        public static async UniTask<T> GetGameInfo<T>(string url)
+        public static async UniTask<T> GetGameInfo<T>(string url, string sheetName)
         {
-            var request = UnityWebRequest.Get($"{url}?sheetName={SheetName}");
+            var request = UnityWebRequest.Get($"{url}?sheetName={sheetName}");
             await request.SendWebRequest();
             if (request.result is UnityWebRequest.Result.ConnectionError or UnityWebRequest.Result.ProtocolError or UnityWebRequest.Result.DataProcessingError)
             {
