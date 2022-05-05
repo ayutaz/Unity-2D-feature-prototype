@@ -6,24 +6,27 @@ namespace _Project.Main
     public class MoveHandler : MonoBehaviour
     {
         private InputSystemTest _inputSystemTest;
-        [SerializeField] private Transform userObject;
+        private PlayerInfoList _playerInfoList;
+        [SerializeField] private PlayerHandler playerHandler;
 
         [Inject]
-        private void Construct(InputSystemTest inputSystemTest)
+        private void Construct(InputSystemTest inputSystemTest, PlayerInfoList playerInfoList)
         {
             _inputSystemTest = inputSystemTest;
+            _playerInfoList = playerInfoList;
             _inputSystemTest.Enable();
         }
 
         private void Start()
         {
+            playerHandler.SetColor(_playerInfoList.gameInfo[0].color);
             _inputSystemTest.Player.Fire.performed += context => Debug.Log("fire");
         }
 
         private void Update()
         {
             var direction = _inputSystemTest.Player.Move.ReadValue<Vector2>();
-            userObject.Translate(direction * Time.deltaTime);
+            playerHandler.UpdatePlayerPosition(direction * _playerInfoList.gameInfo[0].moveSpeed);
         }
     }
 }

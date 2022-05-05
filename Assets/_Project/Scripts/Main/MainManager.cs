@@ -6,10 +6,12 @@ namespace _Project.Main
     public class MainManager : IStartable
     {
         private readonly CharacterDataModel _characterDataModel;
+        private readonly PlayerInfoList _playerInfoList;
 
-        private MainManager(CharacterDataModel characterDataModel)
+        private MainManager(CharacterDataModel characterDataModel, PlayerInfoList playerInfoList)
         {
             _characterDataModel = characterDataModel;
+            _playerInfoList = playerInfoList;
         }
 
         public void Start()

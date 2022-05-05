@@ -9,7 +9,7 @@ namespace _Project.Loading
     {
         private readonly LoadingView _loadingView;
         private readonly CharacterDataModel _characterDataModel;
-        private PlayerInfoList _playerInfo;
+        private readonly PlayerInfoList _playerInfo;
         private const string URL = "https://script.google.com/macros/s/AKfycbzCE73w6cqR7-sk6a3YQ_eIsVMlkt-2uULV7N0hPpRQnXG5A0-IpgIlMz3EBwY9fwC0bw/exec";
         private const string GameInfoSheetName = "gameInfo";
         private const string PlayerInfoSheetName = "playerInfo";
