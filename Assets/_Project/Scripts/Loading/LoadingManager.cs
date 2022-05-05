@@ -30,8 +30,7 @@ namespace _Project.Loading
                 _loadingView.SetProgress(time / 10f);
             }
 
-            SceneManager.LoadSceneAsync("_Project/Scenes/Main", LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync("_Project/Scenes/Loading");
+            SceneManager.LoadSceneAsync("_Project/Scenes/Main");
         }
     }
 }

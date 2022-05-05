@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: _Project.Root.RootLifetimeScope
+    TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
   loadingView: {fileID: 1087843290}

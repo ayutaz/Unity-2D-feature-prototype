@@ -10,6 +10,7 @@ namespace _Project.Loading
 
         protected override void Configure(IContainerBuilder builder)
         {
+            base.Configure(builder);
             builder.RegisterComponent(loadingView);
             builder.RegisterEntryPoint<LoadingManager>();
         }
