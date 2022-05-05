@@ -3,6 +3,7 @@
 Unity Project template Repository
 
 # Demo
+
 GitHub : https://ayutaz.github.io/Unity-2D-feature-prototype/WebGL/WebGL/
 
 Netfily : https://unity-2d-feature-prototype.netlify.app/
@@ -28,7 +29,11 @@ Netfily : https://unity-2d-feature-prototype.netlify.app/
 
 一度 [ほかのリポジトリ](https://github.com/ayutaz/G-Sheet-Unity-Instead-AssetBundle)で検証を行っているため、上の3つの項目と合わせて動くかどうかの検証及び設計の考察
 
-
 # クラス図及び処理の流れ
 
 ![](docs/ClassDiagram.png)
+
+# Memo
+
+* URPのGitHub Actions(Linux)はうごかない [参考](https://github.com/game-ci/unity-builder/issues/391)
+* GitHub Pagesでなくても netlifyでも動く(他でも大丈夫そう)
