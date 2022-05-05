@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+namespace Loading{
+    class GetGameData
+    class LoadingLifetimeScope
+    class LoadingManager
+    class LoadingView
+    
+    LoadingManager ..> LoadingView
+    LoadingManager ..> GetGameData
+    LoadingManager .up.> LoadingLifetimeScope
+}
+
+namespace Main{
+    class MainLifetimeScope
+    class MainManager
+    class MoveHandler
+    MainManager ..> MoveHandler
+    MainManager .up.> MainLifetimeScope
+}
+
+namespace Root{
+    class RootLifetimeScope
+    class CharacterInfo
+    class CharacterInfoList
+    class CharacterDataModel
+    class InputSystemTest
+
+    CharacterDataModel ..> CharacterInfoList
+    CharacterInfoList ..> CharacterInfo
+}
+
+
+Loading.LoadingManager ..> Root.CharacterDataModel
+
+Main.MainManager ..> Root.CharacterDataModel
+Main.MoveHandler ..> Root.InputSystemTest
+@enduml

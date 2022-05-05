@@ -25,3 +25,8 @@ https://ayutaz.github.io/Unity-2D-feature-prototype/WebGL/WebGL/
 * 起動時のゲームパラメータのGoogle SpreadSheetからのパラメータ更新
 
 一度 [ほかのリポジトリ](https://github.com/ayutaz/G-Sheet-Unity-Instead-AssetBundle)で検証を行っているため、上の3つの項目と合わせて動くかどうかの検証及び設計の考察
+
+
+# クラス図及び処理の流れ
+
+![](docs/ClassDiagram.png)
