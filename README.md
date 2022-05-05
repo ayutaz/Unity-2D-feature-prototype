@@ -3,7 +3,8 @@
 Unity Project template Repository
 
 # Demo
-https://ayutaz.github.io/Unity-2D-feature-prototype/WebGL/WebGL/
+GitHub : https://ayutaz.github.io/Unity-2D-feature-prototype/WebGL/WebGL/
+Netfily : https://unity-2d-feature-prototype.netlify.app/
 
 # requirements
 
