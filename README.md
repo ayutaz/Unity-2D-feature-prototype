@@ -2,6 +2,9 @@
 
 Unity Project template Repository
 
+# Demo
+https://ayutaz.github.io/Unity-2D-feature-prototype/WebGL/WebGL/
+
 # requirements
 
 * Unity 2021.3.0f1
